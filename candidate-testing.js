@@ -41,11 +41,26 @@ ${candidateAnswers[3]}    ${correctAnswers[3]}
 ${candidateAnswers[4]}             ${correctAnswers[4]}
 ----------------------------`);
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  //TODO 3.2 use this variable to calculate the candidates score.
+  let grade = 0;
+  let score = 0;
+for (let j = 0; j < candidateAnswers.length; j++){
+  if (candidateAnswers[j].toUpperCase() === correctAnswers[j].toUpperCase()){
+    score = score + 1;
+    }
+  }
+grade = (score/correctAnswers.length) * 100;
 
+if (grade >= 80){
+  console.log(`Grade: ${grade}%. You have passed!`);
+  } else {
+  console.log(`Grade: ${grade}%. You have not passed.`);
+  } 
 
-  return grade;
+return grade;
+
 }
+
 
 function runProgram() {
   askForName();
