@@ -28,7 +28,7 @@ for (i = 0; i < questions.length; i++){
 }
 }
 
-function gradeQuiz() {
+function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
